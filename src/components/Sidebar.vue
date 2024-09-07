@@ -19,6 +19,10 @@
                 <span class="material-icons">work</span>
                 <span class="text">Experience</span>
             </router-link>
+            <router-link to="/education" class="button">
+                <span class="material-icons">school</span>
+                <span class="text">Education</span>
+            </router-link>
         </div>
     </aside>
 </template>

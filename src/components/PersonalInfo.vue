@@ -14,12 +14,15 @@
     </div>
     <h2 class="about-me-title">About Me</h2>
     <p class="about-me">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-        Aldus PageMaker including versions of Lorem Ipsum.</p>
+        Hello! My name is Sepehr Javid. I have always been fascinated by technology and its potential to solve
+        real-world problems. Over the years, I've honed my skills in various programming languages and technologies, and
+        I have a deep passion for learning and exploring new domains. Currently, I'm focused on cloud computing and edge
+        technologies, working with AWS and Google Cloud to design scalable, secure, and efficient solutions. My
+        experience spans across software development, network security, and systems engineering, allowing me to bring a
+        holistic approach to any project I undertake. Looking forward, I'm excited to delve deeper into AI and machine
+        learning, exploring how these technologies can transform industries and improve lives. I believe in the power of
+        technology to drive change, and I'm eager to be a part of the journey towards a smarter, more connected world.
+    </p>
 </template>
 
 <script setup>

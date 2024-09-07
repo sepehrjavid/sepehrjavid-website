@@ -167,7 +167,7 @@ aside {
     }
 
     @media (max-width: 768px) {
-        position: absolute;
+        position: fixed;
         z-index: 99;
     }
 }

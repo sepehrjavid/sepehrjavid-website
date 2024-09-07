@@ -1,6 +1,6 @@
 <template>
     <aside :class="{ 'is-expanded': isExpanded }">
-        <div class="log">
+        <div class="logo">
             <img src="../assets/vue.svg" alt="vue">
         </div>
         <div class="menu-toggle-wrap">
@@ -15,9 +15,9 @@
                 <span class="material-icons">home</span>
                 <span class="text">Home</span>
             </router-link>
-            <router-link to="/about" class="button">
-                <span class="material-icons">description</span>
-                <span class="text">About</span>
+            <router-link to="/experience" class="button">
+                <span class="material-icons">work</span>
+                <span class="text">Experience</span>
             </router-link>
         </div>
     </aside>
@@ -167,7 +167,7 @@ aside {
     }
 
     @media (max-width: 768px) {
-        position: absolute;
+        position: fixed;
         z-index: 99;
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <aside :class="{ 'is-expanded': isExpanded }">
-        <div class="log">
+        <div class="logo">
             <img src="../assets/vue.svg" alt="vue">
         </div>
         <div class="menu-toggle-wrap">

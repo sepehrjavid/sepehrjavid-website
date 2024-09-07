@@ -23,6 +23,10 @@
                 <span class="material-icons">school</span>
                 <span class="text">Education</span>
             </router-link>
+            <router-link to="/skills" class="button">
+                <span class="material-icons">construction</span>
+                <span class="text">Skills</span>
+            </router-link>
         </div>
     </aside>
 </template>

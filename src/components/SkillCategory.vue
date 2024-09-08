@@ -43,20 +43,25 @@ function toggleCategory() {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    transition: height 0.5s ease-out;
+    transition: max-height 0.6s ease-out;
+    max-height: 5em;
+    overflow: hidden;
 
     .open-toggle {
         transition: 0.4s ease-out;
     }
 
     &.is-expanded {
-        >.category-header>.open-toggle {
-            transform: rotate(180deg);
-        }
+        max-height: 100%;
+    }
+
+    &.is-expanded>.category-header>.open-toggle {
+        transform: rotate(180deg);
     }
 
     .category-header {
         background-color: var(--secondary);
+        margin-bottom: 0.3em;
         color: var(--light-more);
         display: flex;
         justify-content: center;

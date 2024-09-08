@@ -1,14 +1,23 @@
 <template>
-    <div class="category-header" @click="toggleCategory()">
-        <font-awesome-icon :icon="category.icon" /> {{ category.name }}
-        <font-awesome-icon :icon="['fas', 'chevron-down']" :class="{ 'open': isOpen }" />
+    <div :class="{ 'is-expanded': isOpen, 'category': true }">
+        <div class="category-header" @click="toggleCategory()">
+            <div class="category-icon">
+                <font-awesome-icon :icon="category.icon" />
+            </div>
+            <b class="category-name">
+                {{ category.name }}
+            </b>
+            <div class="open-toggle">
+                <font-awesome-icon :icon="['fas', 'chevron-down']" />
+            </div>
+        </div>
+        <ul v-show="isOpen" class="skill-list">
+            <li v-for="(item, index) in category.skills" :key="index">
+                <SkillCategory v-if="item.skills" :category="item" />
+                <SkillItem v-else :skill="item" />
+            </li>
+        </ul>
     </div>
-    <ul v-show="isOpen" class="skill-list">
-        <li v-for="(item, index) in category.skills" :key="index">
-            <SkillCategory v-if="item.skills" :category="item" />
-            <SkillItem v-else :skill="item" />
-        </li>
-    </ul>
 </template>
 
 <script setup>
@@ -26,22 +35,43 @@ function toggleCategory() {
 </script>
 
 <style lang="scss" scoped>
-.category-header {
+.category {
     background-color: var(--secondary);
     color: var(--light-more);
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    height: 40px;
-}
-
-.skill-list {
-    position: relative;
+    margin: 0.7em;
+    padding: 1.4em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    list-style-type: none;
+    border-radius: 10px;
+    transition: height 0.5s ease-out;
+
+    .open-toggle {
+        transition: 0.4s ease-out;
+    }
+
+    &.is-expanded {
+        >.category-header>.open-toggle {
+            transform: rotate(180deg);
+        }
+    }
+
+    .category-header {
+        background-color: var(--secondary);
+        color: var(--light-more);
+        display: flex;
+        justify-content: center;
+
+        .category-name {
+            margin-right: 0.4em;
+            margin-left: 0.4em;
+        }
+    }
+
+    .skill-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+    }
 }
 </style>

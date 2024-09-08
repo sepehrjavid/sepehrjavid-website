@@ -10,12 +10,12 @@ import { ref } from 'vue'
 
 const skills = ref([
     {
-        name: 'Programming Languages',
+        name: 'Programming',
         icon: ['fas', 'code'],
         skills: ['C/C++', 'Python', 'Java', 'Javascript', 'Bash']
     },
     {
-        name: 'Web Dev Tools/Frameworks',
+        name: 'Web Development',
         icon: ['fab', 'js'],
         skills: ['Nodejs', 'Django', 'ReactsJs', 'Vuejs', 'Flask', 'Git', 'Nginx']
     },

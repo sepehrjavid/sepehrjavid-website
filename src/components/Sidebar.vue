@@ -27,6 +27,10 @@
                 <span class="material-icons">construction</span>
                 <span class="text">Skills</span>
             </router-link>
+            <router-link to="/certificates" class="button">
+                <span class="material-icons">workspace_premium</span>
+                <span class="text">Certificates</span>
+            </router-link>
         </div>
     </aside>
 </template>

@@ -18,6 +18,10 @@ const router = createRouter({
         {
             path: '/skills',
             component: () => import('../views/Skills.vue')
+        },
+        {
+            path: '/certificates',
+            component: () => import('../views/Certificates.vue')
         }
     ]
 })

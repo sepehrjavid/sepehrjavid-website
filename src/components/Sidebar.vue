@@ -11,31 +11,31 @@
 
         <h3>Menu</h3>
         <div class="menu">
-            <router-link class="button" to="/">
+            <router-link class="button" to="/" @click="isExpanded = false">
                 <span class="material-icons">home</span>
                 <span class="text">Home</span>
             </router-link>
-            <router-link to="/experience" class="button">
+            <router-link to="/experience" class="button" @click="isExpanded = false">
                 <span class="material-icons">work</span>
                 <span class="text">Experience</span>
             </router-link>
-            <router-link to="/education" class="button">
+            <router-link to="/education" class="button" @click="isExpanded = false">
                 <span class="material-icons">school</span>
                 <span class="text">Education</span>
             </router-link>
-            <router-link to="/skills" class="button">
+            <router-link to="/skills" class="button" @click="isExpanded = false">
                 <span class="material-icons">construction</span>
                 <span class="text">Skills</span>
             </router-link>
-            <router-link to="/certificates" class="button">
+            <router-link to="/certificates" class="button" @click="isExpanded = false">
                 <span class="material-icons">workspace_premium</span>
                 <span class="text">Certificates</span>
             </router-link>
-            <router-link to="/publications" class="button">
+            <router-link to="/publications" class="button" @click="isExpanded = false">
                 <span class="material-icons">article</span>
                 <span class="text">Publications</span>
             </router-link>
-            <router-link to="/achievements" class="button">
+            <router-link to="/achievements" class="button" @click="isExpanded = false">
                 <span class="material-icons">emoji_events</span>
                 <span class="text">Achievements</span>
             </router-link>

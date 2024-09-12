@@ -22,6 +22,10 @@ const router = createRouter({
         {
             path: '/certificates',
             component: () => import('../views/Certificates.vue')
+        },
+        {
+            path: '/publications',
+            component: () => import('../views/Publications.vue')
         }
     ]
 })

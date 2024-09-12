@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import ExperienceItem from '../components/ExperienceItem.vue'
+import ExperienceItem from '../components/ExperienceItem.vue';
 import { ref } from 'vue';
 
 const jobs = ref([

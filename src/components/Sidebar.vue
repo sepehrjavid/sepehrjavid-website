@@ -31,6 +31,10 @@
                 <span class="material-icons">workspace_premium</span>
                 <span class="text">Certificates</span>
             </router-link>
+            <router-link to="/publications" class="button">
+                <span class="material-icons">article</span>
+                <span class="text">Publications</span>
+            </router-link>
         </div>
     </aside>
 </template>

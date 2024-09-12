@@ -1,5 +1,5 @@
 <template>
-    <div :class="getCategoryContainerClass()">
+    <section :class="getCategoryContainerClass()">
         <div class="category-header" @click="toggleCategory()">
             <div class="category-icon">
                 <MdiKubernetes v-if="category.name === 'Kubernetes'" />
@@ -13,13 +13,13 @@
                 <font-awesome-icon :icon="['fas', 'chevron-down']" />
             </div>
         </div>
-        <ul v-show="isOpen" class="skill-list">
+        <ul class="skill-list">
             <li v-for="(item, index) in category.skills" :key="index">
                 <SkillCategory v-if="item.skills" :category="item" :theme="getChildTheme()" />
                 <SkillItem v-else :skill="item" />
             </li>
         </ul>
-    </div>
+    </section>
 </template>
 
 <script setup>
@@ -47,7 +47,7 @@ function getChildTheme() {
 }
 
 function getCategoryContainerClass() {
-    let categoryClass = `category ${props.theme}`;
+    let categoryClass = `${props.theme}`;
     if (isOpen.value) {
         categoryClass = categoryClass.concat(" ", "is-expanded");
     }
@@ -65,15 +65,16 @@ function getCategoryContainerClass() {
     background-color: var(--secondary);
 }
 
-.category {
+section {
     color: var(--light-more);
     margin: 0.7em;
     padding: 1.4em;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    transition: max-height 0.4s ease-in-out;
-    max-height: 5em;
+    transition: 0.4s ease-in-out;
+    max-height: 3.5em;
+    min-height: 1em;
     overflow: hidden;
 
     .open-toggle {
@@ -82,10 +83,15 @@ function getCategoryContainerClass() {
 
     &.is-expanded {
         max-height: 100%;
+        min-height: 3em;
     }
 
     &.is-expanded>.category-header>.open-toggle {
         transform: rotate(180deg);
+    }
+
+    &.is-expanded>.skill-list {
+        opacity: 1;
     }
 
     .category-header {
@@ -100,11 +106,13 @@ function getCategoryContainerClass() {
     }
 
     .skill-list {
-        margin-top: 0.4em;
+        opacity: 0;
+        margin-top: 1em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         list-style-type: none;
+        transition: 0.4s ease-in-out;
     }
 }
 </style>

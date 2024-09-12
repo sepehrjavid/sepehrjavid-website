@@ -39,11 +39,11 @@ const skills = ref([
                 skills: ['Calico', 'Cilium']
             },
             {
-                name: 'Google Cloud Platform (GCP)',
+                name: 'GCP',
                 skills: ['GKE', 'ComputeEngine', 'Storage', 'Dataflow', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor']
             },
             {
-                name: 'Amazon Web Service (AWS)',
+                name: 'AWS',
                 icon: ['fab', 'aws'],
                 skills: ['S3', 'Lambda', 'DynamoDB', 'SQS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM']
             }

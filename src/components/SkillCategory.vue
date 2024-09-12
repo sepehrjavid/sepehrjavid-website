@@ -1,5 +1,5 @@
 <template>
-    <div :class="{ 'is-expanded': isOpen, 'category': true }">
+    <div :class="getCategoryContainerClass()">
         <div class="category-header" @click="toggleCategory()">
             <div class="category-icon">
                 <font-awesome-icon :icon="category.icon" />
@@ -13,7 +13,7 @@
         </div>
         <ul v-show="isOpen" class="skill-list">
             <li v-for="(item, index) in category.skills" :key="index">
-                <SkillCategory v-if="item.skills" :category="item" />
+                <SkillCategory v-if="item.skills" :category="item" :theme="getChildTheme()" />
                 <SkillItem v-else :skill="item" />
             </li>
         </ul>
@@ -24,7 +24,8 @@
 import SkillItem from './SkillItem.vue';
 import { ref } from 'vue';
 
-const props = defineProps(['category']);
+const props = defineProps(['category', 'theme']);
+
 
 const isOpen = ref(false);
 
@@ -32,23 +33,47 @@ function toggleCategory() {
     isOpen.value = !isOpen.value;
 }
 
+function getChildTheme() {
+    if (props.theme === 'light-theme') {
+        return 'dark-theme';
+    }
+    else {
+        return 'light-theme';
+    }
+}
+
+function getCategoryContainerClass() {
+    let categoryClass = `category ${props.theme}`;
+    if (isOpen.value) {
+        categoryClass = categoryClass.concat(" ", "is-expanded");
+    }
+    return categoryClass;
+}
+
 </script>
 
 <style lang="scss" scoped>
-.category {
+.dark-theme {
+    background-color: var(--primary);
+}
+
+.light-theme {
     background-color: var(--secondary);
+}
+
+.category {
     color: var(--light-more);
     margin: 0.7em;
     padding: 1.4em;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    transition: max-height 0.6s ease-out;
+    transition: max-height 0.4s ease-in-out;
     max-height: 5em;
     overflow: hidden;
 
     .open-toggle {
-        transition: 0.4s ease-out;
+        transition: 0.4s ease-in-out;
     }
 
     &.is-expanded {
@@ -60,8 +85,6 @@ function toggleCategory() {
     }
 
     .category-header {
-        background-color: var(--secondary);
-        margin-bottom: 0.3em;
         color: var(--light-more);
         display: flex;
         justify-content: center;
@@ -73,6 +96,7 @@ function toggleCategory() {
     }
 
     .skill-list {
+        margin-top: 0.4em;
         display: flex;
         flex-direction: column;
         justify-content: center;

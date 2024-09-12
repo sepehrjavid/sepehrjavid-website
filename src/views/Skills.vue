@@ -1,6 +1,6 @@
 <template>
     <main class="skills-page">
-        <SkillCategory v-for="(category, index) in skills" :key="index" :category="category" />
+        <SkillCategory v-for="(category, index) in skills" :key="index" :category="category" theme="light-theme"/>
     </main>
 </template>
 

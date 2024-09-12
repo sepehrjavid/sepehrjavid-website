@@ -36,12 +36,10 @@ const skills = ref([
             'Prometheus',
             {
                 name: 'Kubernetes',
-                icon: ['fas', 'cloud'],
                 skills: ['Calico', 'Cilium']
             },
             {
                 name: 'Google Cloud Platform (GCP)',
-                icon: ['fas', 'cloud'],
                 skills: ['GKE', 'ComputeEngine', 'Storage', 'Dataflow', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor']
             },
             {

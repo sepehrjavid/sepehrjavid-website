@@ -1,6 +1,6 @@
 <template>
     <main class="skills-page">
-        <SkillCategory v-for="(category, index) in skills" :key="index" :category="category" theme="light-theme"/>
+        <SkillCategory v-for="(category, index) in skills" :key="index" :category="category" theme="light-theme" />
     </main>
 </template>
 
@@ -42,12 +42,12 @@ const skills = ref([
             {
                 name: 'Google Cloud Platform (GCP)',
                 icon: ['fas', 'cloud'],
-                skills: ['GKE', 'ComputeEngine', 'Storage', 'Dataflow', 'Big-query', 'Loadbalancer', 'Cloud Function', 'Cloud Armor']
+                skills: ['GKE', 'ComputeEngine', 'Storage', 'Dataflow', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor']
             },
             {
                 name: 'Amazon Web Service (AWS)',
-                icon: ['fas', 'cloud'],
-                skills: ['S3', 'Lambda', 'DynamoDB', 'Pubsub', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM']
+                icon: ['fab', 'aws'],
+                skills: ['S3', 'Lambda', 'DynamoDB', 'SQS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM']
             }
         ]
     },

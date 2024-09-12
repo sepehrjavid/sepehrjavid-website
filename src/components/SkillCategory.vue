@@ -2,7 +2,9 @@
     <div :class="getCategoryContainerClass()">
         <div class="category-header" @click="toggleCategory()">
             <div class="category-icon">
-                <font-awesome-icon :icon="category.icon" />
+                <MdiKubernetes v-if="category.name === 'Kubernetes'" />
+                <GoogleCloudIcon v-else-if="category.name === 'Google Cloud Platform (GCP)'" />
+                <font-awesome-icon v-else :icon="category.icon" />
             </div>
             <b class="category-name">
                 {{ category.name }}
@@ -22,6 +24,8 @@
 
 <script setup>
 import SkillItem from './SkillItem.vue';
+import MdiKubernetes from './customIcons/KubernetesIcon.vue'
+import GoogleCloudIcon from './customIcons/GoogleCloudIcon.vue';
 import { ref } from 'vue';
 
 const props = defineProps(['category', 'theme']);

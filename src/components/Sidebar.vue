@@ -35,6 +35,10 @@
                 <span class="material-icons">article</span>
                 <span class="text">Publications</span>
             </router-link>
+            <router-link to="/achievements" class="button">
+                <span class="material-icons">emoji_events</span>
+                <span class="text">Achievements</span>
+            </router-link>
         </div>
     </aside>
 </template>

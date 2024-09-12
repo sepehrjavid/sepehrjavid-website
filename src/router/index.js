@@ -26,6 +26,10 @@ const router = createRouter({
         {
             path: '/publications',
             component: () => import('../views/Publications.vue')
+        },
+        {
+            path: '/achievements',
+            component: () => import('../views/Achievements.vue')
         }
     ]
 })

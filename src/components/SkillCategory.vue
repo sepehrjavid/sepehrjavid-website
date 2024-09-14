@@ -3,7 +3,7 @@
         <div class="category-header" @click="toggleCategory()">
             <div class="category-icon">
                 <MdiKubernetes v-if="category.name === 'Kubernetes'" />
-                <GoogleCloudIcon v-else-if="category.name === 'Google Cloud Platform (GCP)'" />
+                <GoogleCloudIcon v-else-if="category.name === 'GCP'" />
                 <font-awesome-icon v-else :icon="category.icon" />
             </div>
             <b class="category-name">

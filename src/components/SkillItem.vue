@@ -1,6 +1,6 @@
 <template>
     <div class="skill-item">
-        <b> {{ skill }}</b>
+        <b>{{ skill }}</b>
     </div>
 </template>
 
@@ -19,5 +19,11 @@ const prop = defineProps(['skill']);
     color: var(--primary);
     display: flex;
     justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 7px var(--secondary-active);
+    }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <Sidebar />
-    <router-view />
+    <router-view class="main-view" />
   </div>
 </template>
 
@@ -45,10 +45,9 @@ button {
   main {
     flex: 1 1 0;
     padding: 2rem;
-
-    @media (max-width: 768px) {
-      padding-left: 6rem;
-    }
+    max-width: calc(100vw - (2rem + 32px));
+    position: relative;
+    left: calc(2rem + 32px);
   }
 }
 </style>

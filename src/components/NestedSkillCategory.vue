@@ -1,5 +1,5 @@
 <template>
-    <section :class="{
+    <div :class="{
         'is-expanded': props.isOpen,
         'nested': true
     }">
@@ -16,13 +16,18 @@
                 <font-awesome-icon :icon="['fas', 'chevron-down']" />
             </div>
         </div>
-        <slot name="skill-list"></slot>
-    </section>
+        <div class="skill-list">
+            <template v-for="(item, index) in category.skills" :key="index">
+                <SkillItem :skill="item" />
+            </template>
+        </div>
+    </div>
 </template>
 
 <script setup>
 import MdiKubernetes from './customIcons/KubernetesIcon.vue'
 import GoogleCloudIcon from './customIcons/GoogleCloudIcon.vue';
+import SkillItem from '../components/SkillItem.vue';
 
 
 const props = defineProps(['category', 'isOpen']);
@@ -32,11 +37,19 @@ function toggleCategory() {
     emits("toggleIsOpen")
 }
 
+function getCategoryContainerClass() {
+    let categoryClass = `nested ${props.theme}`;
+    if (props.isOpen) {
+        categoryClass = categoryClass.concat(" ", "is-expanded");
+    }
+    return categoryClass;
+}
+
 </script>
 
 <style lang="scss" scoped>
-section {
-    background-color: var(--secondary);
+.nested {
+    background-color: var(--primary);
     color: var(--light-more);
     margin: 0.7em;
     padding: 1.4em;
@@ -68,6 +81,20 @@ section {
             margin-right: 0.4em;
             margin-left: 0.4em;
         }
+    }
+
+    .skill-list {
+        opacity: 0;
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+        transition: 0.4s ease-in-out;
+    }
+
+    &.is-expanded>.skill-list {
+        opacity: 1;
     }
 
 }

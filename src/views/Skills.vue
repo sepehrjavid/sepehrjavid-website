@@ -108,7 +108,6 @@ const skills = ref([
     display: flex;
     flex-direction: column;
     justify-content: center;
-    list-style-type: none;
     transition: 0.4s ease-in-out;
 }
 

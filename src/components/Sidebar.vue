@@ -1,7 +1,7 @@
 <template>
     <aside :class="{ 'is-expanded': isExpanded }">
         <div class="logo">
-            <img src="../assets/vue.svg" alt="vue">
+            <img src="../assets/sep-logo.svg" alt="vue" style="color: black;">
         </div>
         <div class="menu-toggle-wrap">
             <button class="menu-toggle" @click="ToggleMenu">

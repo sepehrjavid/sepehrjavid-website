@@ -66,7 +66,7 @@ const skills = ref([
             {
                 name: 'Kubernetes',
                 isOpen: false,
-                skills: ['Calico', 'Cilium']
+                skills: ['HPA', 'Taint/Tolerations', 'ServiceAccounts', 'Helm', 'Cert Manager', 'Calico', 'Cilium']
             },
             {
                 name: 'GCP',

@@ -44,7 +44,7 @@ section {
     flex-direction: column;
     border-radius: 10px;
     transition: max-height 0.4s ease-in-out;
-    max-height: 3.5em;
+    max-height: 4em;
     overflow: hidden;
 
     .open-toggle {

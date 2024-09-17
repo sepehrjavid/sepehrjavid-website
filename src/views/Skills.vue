@@ -1,12 +1,20 @@
 <template>
     <main class="skills-page">
-        <SkillCategory @toggle-is-open="handleIsOpen(category)" v-for="(category, index) in skills" :key="index"
-            :category="category" theme="light-theme" :is-open="category.isOpen">
+        <SkillCategory @toggle-is-open="handleIsOpen(category)" v-for="(category, category_index) in skills"
+            :key="category_index" :category="category" theme="light-theme" :is-open="category.isOpen">
             <template #skill-list>
                 <div class="skill-list">
-                    <template v-for="(item, index) in category.skills" :key="index">
+                    <template v-for="(item, skill_index) in category.skills" :key="skill_index">
                         <NestedSkillCategory v-if="item.skills" :category="item" :is-open="item.isOpen"
-                            @toggle-is-open="handleIsOpen(item)" />
+                            @toggle-is-open="handleIsOpen(item)">
+                            <template #skill-list>
+                                <div class="skill-list">
+                                    <template v-for="(nested_item, nested_index) in item.skills" :key="nested_index">
+                                        <SkillItem :skill="nested_item" />
+                                    </template>
+                                </div>
+                            </template>
+                        </NestedSkillCategory>
                         <SkillItem v-else :skill="item" />
                     </template>
                 </div>

@@ -1,11 +1,26 @@
 <template>
     <main class="experiance-page">
-        <ExperienceItem v-for="(job, index) in jobs" :job="job" :key="index" />
+        <InfoCard v-for="(job, index) in jobs" :title="job.title" :key="index">
+            <template #metadata>
+                <p class="company"><font-awesome-icon :icon="['fas', 'building']" class="icon" /> {{ job.company }} -
+                    <font-awesome-icon :icon="['fas', 'location-dot']" class="icon" />
+                    {{ job.location }}
+                </p>
+                <p class="date"><font-awesome-icon :icon="['fas', 'calendar']" class="icon" /> {{ job.date }}</p>
+            </template>
+            <template #details>
+                <ul class="description">
+                    <li v-for="(detail, i) in job.details" :key="i" class="description-item">
+                        {{ detail }}
+                    </li>
+                </ul>
+            </template>
+        </InfoCard>
     </main>
 </template>
 
 <script setup>
-import ExperienceItem from '../components/ExperienceItem.vue';
+import InfoCard from '../components/InfoCard.vue';
 import { ref } from 'vue';
 
 const jobs = ref([
@@ -88,4 +103,22 @@ const jobs = ref([
 ])
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.company {
+    color: var(--secondary-active);
+    margin-bottom: 2px;
+}
+
+.date {
+    color: var(--secondary-active);
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--light);
+}
+
+.description-item {
+    margin-bottom: 3px;
+}
+</style>

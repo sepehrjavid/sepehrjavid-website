@@ -1,11 +1,23 @@
 <template>
     <main class="cert-page">
-        <CertificateItem v-for="(cert, index) in certs" :key="index" :cert="cert" />
+        <InfoCard v-for="(cert, index) in certs" :key="index" :title="cert.title">
+            <template #metadata>
+                <div class="issuer">
+                    <font-awesome-icon :icon="['fas', 'building']" class="icon" /> {{ cert.issuer }}
+                </div>
+                <div class="date">
+                    <font-awesome-icon :icon="['fas', 'calendar']" class="icon" /> {{ cert.issueDate }}
+                </div>
+            </template>
+            <template #details>
+                <p class="details">{{ cert.details }}</p>
+            </template>
+        </InfoCard>
     </main>
 </template>
 
 <script setup>
-import CertificateItem from '../components/CertificateItem.vue';
+import InfoCard from '../components/InfoCard.vue';
 import { ref } from 'vue';
 
 const certs = ref([
@@ -37,4 +49,18 @@ const certs = ref([
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.issuer {
+    color: var(--secondary-active);
+    margin-bottom: 2px;
+}
+
+.date {
+    color: var(--secondary-active);
+    margin-bottom: 10px;
+}
+
+.details {
+    color: var(--light);
+}
+</style>

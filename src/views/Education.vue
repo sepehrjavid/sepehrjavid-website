@@ -1,11 +1,25 @@
 <template>
     <main class="education-page">
-        <EducationItem v-for="(education, index) in educations" :key="index" :education="education" />
+        <InfoCard v-for="(education, index) in educations" :key="index" :title="education.degree">
+            <template #metadata>
+                <p class="institution">
+                    <font-awesome-icon :icon="['fas', 'school']" class="icon" />
+                    {{ education.institution }}
+                </p>
+                <p class="date">
+                    <font-awesome-icon :icon="['fas', 'calendar']" class="icon" />
+                    {{ education.date }}
+                </p>
+            </template>
+            <template #details>
+                <p class="details">{{ education.details }}</p>
+            </template>
+        </InfoCard>
     </main>
 </template>
 
 <script setup>
-import EducationItem from '../components/EducationItem.vue';
+import InfoCard from '../components/InfoCard.vue';
 import { ref } from 'vue';
 
 const educations = ref([
@@ -24,4 +38,18 @@ const educations = ref([
 ]);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.institution {
+    color: var(--secondary-active);
+    margin-bottom: 2px;
+}
+
+.date {
+    color: var(--secondary-active);
+    margin-bottom: 10px;
+}
+
+.details {
+    color: var(--light);
+}
+</style>

@@ -1,11 +1,12 @@
 <template>
     <main class="achievements-page">
-        <AchievementItem v-for="(achievement, index) in achievements" :key="index" :achievement="achievement" />
+        <InfoCard v-for="(achievement, index) in achievements" :key="index" :title="achievement.title">
+        </InfoCard>
     </main>
 </template>
 
 <script setup>
-import AchievementItem from '../components/AchievementItem.vue';
+import InfoCard from '../components/InfoCard.vue';
 import { ref } from 'vue';
 
 const achievements = ref([

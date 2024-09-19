@@ -1,11 +1,21 @@
 <template>
     <main class="publications-page">
-        <PublicationItem v-for="(publication, index) in publications" :key="index" :publication="publication" />
+        <InfoCard v-for="(publication, index) in publications" :key="index" :title="publication.title">
+            <template #metadata>
+                <p class="conference">
+                    <font-awesome-icon :icon="['fas', 'building-columns']" /> {{ publication.conference }}
+                </p>
+            </template>
+            <template #details>
+                <p class="details">{{ publication.details }}</p>
+                <a :href="publication.link" class="read-more" target="_blank">Read More</a>
+            </template>
+        </InfoCard>
     </main>
 </template>
 
 <script setup>
-import PublicationItem from '../components/PublicationItem.vue';
+import InfoCard from '../components/InfoCard.vue';
 import { ref } from 'vue';
 
 
@@ -25,3 +35,20 @@ const publications = ref([
 ]);
 
 </script>
+
+
+<style lang="scss" scoped>
+.conference {
+    color: var(--secondary-active);
+    margin-bottom: 0.5em;
+}
+
+.details {
+    color: var(--light);
+    margin-bottom: 0.5em;
+}
+
+.read-more {
+    color: var(--light);
+}
+</style>

@@ -44,7 +44,7 @@ button {
 
   main {
     flex: 1 1 0;
-    padding: 2rem;
+    padding: 1.5rem;
     max-width: calc(100vw - (2rem + 32px));
     position: relative;
     left: calc(2rem + 32px);

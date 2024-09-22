@@ -66,17 +66,17 @@ function handleIsOpen(category, parent) {
 
 const skills = ref([
     {
-        name: 'Programming',
+        name: 'Languages',
         icon: ['fas', 'code'],
         type: "simple",
         skills: ['C/C++', 'Python', 'Java', 'Javascript', 'Bash'],
         isOpen: false
     },
     {
-        name: 'Web Development',
+        name: 'Web Dev Tools',
         icon: ['fab', 'js'],
         type: "simple",
-        skills: ['Nodejs', 'Django', 'ReactsJs', 'Vuejs', 'Flask', 'Git', 'Nginx'],
+        skills: ['Nodejs', 'Django', 'ReactsJs', 'Vuejs', 'Flask', 'Git'],
         isOpen: false
     },
     {
@@ -91,30 +91,43 @@ const skills = ref([
             'gRPC',
             'MQTT',
             'Network Service Mesh',
-            'OpenStack',
             'gitLab Devops',
             'Kafka',
-            'Grafana',
-            'Prometheus',
+            'Nginx',
+            'OpenStack',
             {
                 name: 'Kubernetes',
                 isOpen: false,
                 type: "nestedChild",
-                skills: ['HPA', 'Taint/Tolerations', 'ServiceAccounts', 'Helm', 'Cert Manager', 'Calico', 'Cilium']
+                skills: ['HPA', 'Ingress', 'Gateway', 'Taint/Tolerations', 'ServiceAccounts', 'Helm', 'Calico', 'Cilium', 'ArgoCD']
             },
             {
                 name: 'GCP',
                 isOpen: false,
                 type: "nestedChild",
-                skills: ['GKE', 'ComputeEngine', 'Storage', 'Dataflow', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor']
+                skills: ['GKE', 'Compute Engine', 'Cloud Storage', 'Dataflow', 'Dataproc', 'Cloud Run', 'Eventarc', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor', 'CloudSQL', 'VPC', 'IAM', 'CAS']
             },
             {
                 name: 'AWS',
                 isOpen: false,
                 type: "nestedChild",
                 icon: ['fab', 'aws'],
-                skills: ['S3', 'Lambda', 'DynamoDB', 'SQS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM']
-            }
+                skills: ['Cloud Front', 'Athena', 'VPC', 'AuroraDB', 'S3', 'Lambda', 'DynamoDB', 'SQS', 'SNS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM', 'ASG', 'Route53', 'Redshift', 'Quicksight', 'Kinesis']
+            },
+            {
+                name: "Observability",
+                isOpen: false,
+                icon: ['fas', 'gauge'],
+                type: "nestedChild",
+                skills: ['Grafana', 'Prometheus', 'Tempo', 'Loki']
+            },
+            {
+                name: "Security",
+                isOpen: false,
+                icon: ['fas', 'lock'],
+                type: "nestedChild",
+                skills: ['Vault', 'Cert Manager', 'Keycloak']
+            },
         ]
     },
     {
@@ -122,28 +135,28 @@ const skills = ref([
         isOpen: false,
         type: "simple",
         icon: ['fas', 'database'],
-        skills: ['PostgreSQL', 'MongoDB', 'SQLite', 'Redis', 'Vault']
+        skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'SQLite', 'Redis']
     },
     {
         name: 'Security',
         isOpen: false,
         type: "simple",
         icon: ['fas', 'lock'],
-        skills: ['Metasploit', 'Cain&Abel', 'BurpSuite', 'WireGuard', 'strongSwan', 'BeEF', 'EthicalHacking', 'Informationsecurity', 'Networksecurity', 'Trivy', 'ScoutSuite']
+        skills: ['Metasploit', 'Cain&Abel', 'BurpSuite', 'WireGuard', 'strongSwan', 'BeEF', 'Ethical Hacking', 'Information Security', 'Network Security', 'Trivy', 'ScoutSuite']
     },
     {
         name: 'Networking',
         isOpen: false,
         type: "simple",
         icon: ['fas', 'network-wired'],
-        skills: ['CCNA R&S and security', 'Wireshark', 'HLS', 'Fastclick', 'DPDK', 'SRv6', 'eBPF programming', 'Linux kernel network stack']
+        skills: ['Wireshark', 'SRv6', 'eBPF programming', 'Linux kernel network stack', 'Packet level trouble shooting', 'Bind9', 'CCNA R&S and security']
     },
     {
         name: 'Operating Systems',
         isOpen: false,
         type: "simple",
         icon: ['fas', 'desktop'],
-        skills: ['Kali Linux', 'Linux Server and Desktop', 'Windows Server', 'MacOS']
+        skills: ['Linux', 'Multi-processing', 'Multi-threading', 'Windows Server', 'MacOS']
     }
 ])
 

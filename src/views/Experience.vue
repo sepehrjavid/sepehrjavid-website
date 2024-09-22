@@ -9,11 +9,11 @@
                 <p class="date"><font-awesome-icon :icon="['fas', 'calendar']" class="icon" /> {{ job.date }}</p>
             </template>
             <template #details>
-                <ul class="description">
-                    <li v-for="(detail, i) in job.details" :key="i" class="description-item">
+                <div class="description">
+                    <div v-for="(detail, i) in job.details" :key="i" class="description-item">
                         {{ detail }}
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </template>
         </InfoCard>
     </main>
@@ -25,48 +25,60 @@ import { ref } from 'vue';
 
 const jobs = ref([
     {
-        title: 'Security and Infrastructure Engineer',
+        title: 'Lead Cloud and DevOps Engineer',
         company: 'Focalpay',
         location: 'Stockholm, Sweden',
-        date: 'October 2023 - Present',
+        date: 'July 2024 - Present',
         details: [
-            'Proposed and deployed a Canary deployment for enhanced progressive delivery.',
-            'Introduced and deployed GCP Cloud Armor and API Gateway for improved traffic control and flexibility.',
-            'Reduced GCP costs by 15.1% by eliminating redundant resources and optimizing resource types for cost efficiency.',
-            'Added observability to the cluster using Grafana stack, identifying slow APIs and improving performance.',
-            'Deploying and supporting a company\'s cloud solution using GKE, Bigquery, Kafka, Dataflow, and Cloud Function.'
+            'In a team-work with the backend team we enhanced observability of the Kubernetes cluster using Grafana stack, identifying slow APIs and improving performance.',
+            'For analytics, I utilized GCP Dataflow, Kafka, and Big Query to help make data-driven decisions, whilst using BI tools such as Preset to visualize the data.',
+            'Utilized cert manager and using ACME protocol, I automated the certificate renewal of the company.',
         ]
     },
     {
-        title: 'Cloud Networking Research Intern',
+        title: 'Cloud and DevOps',
+        company: 'Focalpay',
+        location: 'Stockholm, Sweden',
+        date: 'October 2023 - June 2024',
+        details: [
+            'With my Proactive attitude and Observant skill, I identified the need, proposed and deployed a Canary deployment in GKE using Argo Rollouts, ArgoCD, and Nginx ingress which helped enhance progressive delivery.',
+            'Identifying the need for an extra security layer I introduced and deployed GCP Cloud Armor by combining GCP NEGs, GCP Load balancers, and Kubernetes Nginx ingress controller for improved traffic control and security.',
+            'Analyzing the usage requirements, I identified wastes and reduced GCP costs by 15.1% by eliminating redundant resources and optimizing resource types for cost efficiency.',
+            'By the request of the backend developers we provided an event driven mechanism using Kafka among the Microservices in the Kubernetes cluster.',
+            'Working closely with the backend team, I spotted a need, and redesigned the git structure as well as the Gitlab CI/CD pipelines to match with the new requirements which eased the development process based on the consecutive feedbacks.'
+        ]
+    },
+    {
+        title: 'Cloud Networking Researcher',
         company: 'Ericsson',
         location: 'Jorvas, Finland',
         date: 'July 2023 - Sep 2023',
         details: [
-            'Engineered Sepittov2, an advanced congestion mitigation protocol improving SRv6 network latency by 64% which supports various congestion mitigation strategies based on packet QoS class.',
-            'Designed an efficient latency observability for K8s cluster which utilized the user packets to piggyback telemetry data and reduce overhead telemetry traffic in the network.'
+            'With the help of an IETF researcher and my Self-Reflective personality, I refined and re-engineered Sepittov2, an advanced congestion mitigation protocol improving SRv6 network latency by 64% which supports various congestion mitigation strategies based on packet QoS class. The protocol was design by benefiting from eBPF, and Linux Qdiscs.',
+            'Wrote and published the enhanced Sepittov2 protocol in IEEE CSCN23 conference.',
+            'Designed an efficient latency observability for Kubernetes cluster which utilized and added extra headers to the user packets, using eBPF, to piggyback telemetry data and reduce telemetry traffic overhead in the network.'
         ]
     },
     {
-        title: 'Thesis Worker',
+        title: 'Master Thesis Student',
         company: 'Ericsson',
         location: 'Jorvas, Finland',
         date: 'Dec 2022 - Jun 2023',
         details: [
-            'Obtained deep knowledge of eBPF programming and Linux network stack including Qdisc, XDP, Kprobes, and iptables.',
+            'Using my Fast learning skills, I obtained deep knowledge of eBPF programming with C and Linux network stack including Qdisc, XDP, Kprobes, and iptables within 2 months which was praised by the manager.',
             'Conducted in-depth research on networking in the Linux kernel, eBPF programming, congestion control mechanisms, and packet manipulation.',
-            'Engineered a sophisticated eBPF congestion control protocol (called Sepittov1) using packet manipulation and graph theory, improving network latency in an SRv6 network.'
+            'With my Problem solving skills I tackled a complicated thesis to engineer a sophisticated eBPF congestion control protocol (called Sepittov1) using packet manipulation and graph theory, improving network latency in an SRv6 network compared to hop-based routing protocols.'
         ]
     },
     {
-        title: 'Research Intern',
+        title: 'Cloud Researcher',
         company: 'Ericsson',
         location: 'Jorvas, Finland',
         date: 'May 2022 - Aug 2023',
         details: [
-            'Automated the installation of new Network Service Mesh (NSM) versions on Kubernetes using Ansible with different CNIs, leading to in-depth research on NSM functionality.',
-            'Examined traffic shaping in Kubernetes with CNIs such as Calico and Cilium, performing in-depth research on each, leading to a paper submission.',
-            'Performed deep research on SRv6 in Kubernetes CNIs and Linux kernel.'
+            'Automated the installation of new Network Service Mesh (NSM) on Kubernetes using Ansible with different CNIs such as Calico and Cilium, leading to in-depth research on NSM functionality.',
+            'Examined traffic shaping in Kubernetes with different CNIs, performing in-depth research on each, leading to a paper submission.',
+            'Within a span of 1 month with my fast learning skiils I obtained deep knowledge of SRv6 and performed deep research on SRv6 in Kubernetes CNIs and Linux kernel.',
         ]
     },
     {
@@ -75,13 +87,12 @@ const jobs = ref([
         location: 'Shiraz, Iran',
         date: 'Sep 2019 - Sep 2021',
         details: [
-            'Iranjourney project management with agile methods and back-end development using Django REST framework, Django Channels, Redis, and PostgreSQL.',
-            'Software testing using Django automated test tools as well as pytest',
+            'Iranjourney project management with my Leadership skills and using agile methods and back-end development using Django REST framework, Django Channels, Redis, and PostgreSQL. Software testing was done using Django automated test tools as well as pytest.',
             'Local Linux demo server and production server setup using Docker, Nginx, and Bind9.'
         ]
     },
     {
-        title: 'Java Developer Intern',
+        title: 'Java Developer',
         company: 'Rayanova',
         location: 'Shiraz, Iran',
         date: 'Mar 2019 - Jul 2019',
@@ -119,6 +130,6 @@ const jobs = ref([
 }
 
 .description-item {
-    margin-bottom: 3px;
+    margin-bottom: 0.3em;
 }
 </style>

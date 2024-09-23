@@ -15,12 +15,13 @@
         </div>
         <div class="about-me">
             <h2 class="about-me-title">About Me</h2>
-            <p> Hey there! I'm Sepehr Javid, a computer science enthusiast born on January 18, 1999, with a knack for
-                problem-solving and a passion for all things tech. Whether I'm diving deep into cloud computing or
+            <p> Hey there! 👋 I'm Sepehr Javid, a computer science enthusiast born on January 18, 1999, with a knack for
+                problem-solving 🧠 and a passion for all things tech. Whether I'm diving deep into cloud computing or
                 tinkering
                 with intricate network systems, I thrive on the thrill of unraveling complexities.</p>
 
-            <p> My journey took flight with a bachelor's degree from Shiraz University, where I improved my skills and
+            <p> My journey took flight with a bachelor's degree from Shiraz University 🎓, where I improved my skills
+                and
                 discovered my love for teaching as a multiple-time teaching assistant (TA) and creating innovative
                 solutions. One of my proudest achievements? Developing Sepitto, a network congestion protocol showcased
                 in
@@ -28,20 +29,21 @@
                 congestion by piggybacking link congestion information on user data packet headers, requiring in-flight
                 packet header modification—it's my nerdy pride and joy! </p>
 
-            <p> As a lifelong learner, I'm constantly striving to level up my skills and apply my computer science and
+            <p> As a lifelong learner 📚, I'm constantly striving to level up my skills and apply my computer science 💻
+                and
                 automation know-how to simplify my everyday tasks. Whether it's automating mundane chores or
                 experimenting
                 with small projects, I'm always on the lookout for ways to make life a bit easier. </p>
 
-            <p> When I'm not crafting cutting-edge solutions, you might find me on the court playing tennis, shooting
-                hoops,
+            <p> When I'm not crafting cutting-edge solutions, you might find me on the court playing tennis 🎾, shooting
+                hoops 🏀,
                 or cheering for my favorite football team. And speaking of heights, my love for aviation isn't just a
                 flight
-                of fancy—I'm a die-hard Flight Simulator aficionado! </p>
+                of fancy—I'm a die-hard Flight Simulator ✈️ aficionado! </p>
 
             <p> Academically, I've spread my wings with a master's degree from KTH University and Aalto University
                 through
-                the SECCLO program, graduating with honors. Along the way, I tackled new challenges, gained fresh
+                the SECCLO program, graduating with honors 🏅. Along the way, I tackled new challenges, gained fresh
                 perspectives, and even scored a full scholarship. </p>
 
             <p> Beyond tech and learning, I'm all about teamwork, new challenges, and... gaming! Call of Duty,
@@ -51,7 +53,8 @@
                 for
                 data preperation.
             </p>
-            <p> So, let's connect! Whether it’s cracking codes, automating tasks, or exploring the cloud, I’m always up
+            <p> So, let's connect! 🔗 Whether it’s cracking codes, automating tasks, or exploring the cloud, I’m always
+                up
                 for the next big adventure in tech. </p>
         </div>
     </main>

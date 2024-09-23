@@ -85,13 +85,10 @@ const skills = ref([
         type: "nested",
         icon: ['fas', 'cloud'],
         skills: [
-            'Ansible',
             'Docker',
-            'Terraform',
             'gRPC',
             'MQTT',
             'Network Service Mesh',
-            'gitLab Devops',
             'Kafka',
             'Nginx',
             'OpenStack',
@@ -113,6 +110,13 @@ const skills = ref([
                 type: "nestedChild",
                 icon: ['fab', 'aws'],
                 skills: ['Cloud Front', 'Athena', 'VPC', 'AuroraDB', 'S3', 'Lambda', 'DynamoDB', 'SQS', 'SNS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM', 'ASG', 'Route53', 'Redshift', 'Quicksight', 'Kinesis']
+            },
+            {
+                name: 'CI/CD & Automation',
+                isOpen: false,
+                type: "nestedChild",
+                icon: ['fas', 'cogs'],
+                skills: ['Ansible', 'Terraform', 'AWS CodePipeline', 'AWS CodeBuild', 'Gitlab Pipeline']
             },
             {
                 name: "Observability",

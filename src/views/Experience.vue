@@ -30,22 +30,24 @@ const jobs = ref([
         location: 'Stockholm, Sweden',
         date: 'July 2024 - Present',
         details: [
-            'In a team-work with the backend team we enhanced observability of the Kubernetes cluster using Grafana stack, identifying slow APIs and improving performance.',
-            'For analytics, I utilized GCP Dataflow, Kafka, and Big Query to help make data-driven decisions, whilst using BI tools such as Preset to visualize the data.',
-            'Utilized cert manager and using ACME protocol, I automated the certificate renewal of the company.',
+            'Optimized latency and operational overhead by designing a solution leveraging GCP Gateway Controller for Kubernetes with GCP Global Load Balancers to serve content closer to users, improving latency by approximately 12.5%.',
+            'Enhanced security through zero-trust implementation by designing and provisioning a PKI using GCP Certificate Authority Service and Kubernetes cert-manager, ensuring encrypted communication between workloads and load balancers.',
+            'Enabled progressive delivery by introducing a Canary deployment mechanism in GKE, utilizing Kubernetes services, HTTPRoute, and ArgoCD, driven by a proactive and observant approach to system needs.',
+            'Strengthened traffic control and security by redesigning and deploying GCP Cloud Armor using Kubernetes GCPBackendPolicy resources for an additional security layer.',
+            'Achieved significant cost savings by analyzing usage patterns and reducing GCP costs by 33.3%, optimizing resource allocation based on historical metrics and usage needs.',
+            'Designed and implemented a fully serverless architecture for a side project with minimal operational costs, utilizing GCP Cloud Storage, Cloud Run, Cloud CDN, Cloud Build, GCP Load Balancer, and Cloud Armor.'
         ]
     },
     {
-        title: 'Cloud and DevOps',
+        title: 'Cloud and DevOps Engineer',
         company: 'Focalpay',
         location: 'Stockholm, Sweden',
         date: 'October 2023 - June 2024',
         details: [
-            'With my Proactive attitude and Observant skill, I identified the need, proposed and deployed a Canary deployment in GKE using Argo Rollouts, ArgoCD, and Nginx ingress which helped enhance progressive delivery.',
-            'Identifying the need for an extra security layer I introduced and deployed GCP Cloud Armor by combining GCP NEGs, GCP Load balancers, and Kubernetes Nginx ingress controller for improved traffic control and security.',
-            'Analyzing the usage requirements, I identified wastes and reduced GCP costs by 15.1% by eliminating redundant resources and optimizing resource types for cost efficiency.',
-            'By the request of the backend developers we provided an event driven mechanism using Kafka among the Microservices in the Kubernetes cluster.',
-            'Working closely with the backend team, I spotted a need, and redesigned the git structure as well as the Gitlab CI/CD pipelines to match with the new requirements which eased the development process based on the consecutive feedbacks.'
+            'Implemented an event-driven architecture using Strimzi Kafka on GKE, working with the backend developers, while hardening the security of the Kafka cluster.',
+            'Optimized analytics workflows by integrating GCP Dataflow, Pub/Sub, Kafka Connect CDC, and BigQuery to enable data-driven decisions, complemented by BI tools like Preset for effective data visualization.',
+            'Improved observability and performance of the Kubernetes cluster through collaboration with the backend team, leveraging the Grafana stack (Loki, Prometheus, and Tempo) to identify and resolve slow APIs.',
+            'Streamlined development processes by redesigning the Git structure and GitLab CI/CD pipelines to align with new requirements, enhancing efficiency and workflow based on iterative feedback from the team.'
         ]
     },
     {
@@ -130,6 +132,6 @@ const jobs = ref([
 }
 
 .description-item {
-    margin-bottom: 0.3em;
+    margin-bottom: 1em;
 }
 </style>

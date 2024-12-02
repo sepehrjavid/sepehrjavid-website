@@ -102,21 +102,21 @@ const skills = ref([
                 name: 'GCP',
                 isOpen: false,
                 type: "nestedChild",
-                skills: ['GKE', 'Compute Engine', 'Cloud Storage', 'Dataflow', 'Dataproc', 'Cloud Run', 'Eventarc', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor', 'CloudSQL', 'VPC', 'IAM', 'CAS']
+                skills: ['GKE', 'Compute Engine', 'Cloud Storage', 'Dataflow', 'Dataproc', 'Cloud Run', 'Eventarc', 'BigQuery', 'Loadbalancer', 'Cloud Function', 'Cloud Armor', 'CloudSQL', 'VPC', 'IAM', 'CAS', 'Cloud CDN', 'Cloud Router']
             },
             {
                 name: 'AWS',
                 isOpen: false,
                 type: "nestedChild",
                 icon: ['fab', 'aws'],
-                skills: ['Cloud Front', 'Athena', 'VPC', 'AuroraDB', 'S3', 'Lambda', 'DynamoDB', 'SQS', 'SNS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM', 'ASG', 'Route53', 'Redshift', 'Quicksight', 'Kinesis']
+                skills: ['Cloud Front', 'Athena', 'VPC', 'AuroraDB', 'S3', 'Lambda', 'DynamoDB', 'SQS', 'SNS', 'EC2', 'ECS', 'EKS', 'Cloud Watch', 'RDS', 'IAM', 'Route53', 'Redshift', 'Quicksight', 'Kinesis']
             },
             {
                 name: 'CI/CD & Automation',
                 isOpen: false,
                 type: "nestedChild",
                 icon: ['fas', 'cogs'],
-                skills: ['Ansible', 'Terraform', 'AWS CodePipeline', 'AWS CodeBuild', 'Gitlab Pipeline']
+                skills: ['Ansible', 'Terraform', 'AWS CodePipeline', 'AWS CodeBuild', 'Gitlab Pipeline', 'GCP Cloud Build']
             },
             {
                 name: "Observability",

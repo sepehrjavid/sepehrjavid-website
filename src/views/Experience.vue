@@ -35,7 +35,7 @@ const jobs = ref([
             'Enabled progressive delivery by introducing a Canary deployment mechanism in GKE, utilizing Kubernetes services, HTTPRoute, and ArgoCD, driven by a proactive and observant approach to system needs.',
             'Strengthened traffic control and security by redesigning and deploying GCP Cloud Armor using Kubernetes GCPBackendPolicy resources for an additional security layer.',
             'Achieved significant cost savings by analyzing usage patterns and reducing GCP costs by 33.3%, optimizing resource allocation based on historical metrics and usage needs.',
-            'Designed and implemented a fully serverless architecture for a side project with minimal operational costs, utilizing GCP Cloud Storage, Cloud Run, Cloud CDN, Cloud Build, GCP Load Balancer, and Cloud Armor.'
+            'Designed and implemented a fully serverless architecture for a side project with minimal operational costs, utilizing GCP Cloud Storage, Cloud Run, Cloud CDN, Cloud Build, GCP Load Balancer, Cloud Armor, and deployed/maintained using Terraform.'
         ]
     },
     {
